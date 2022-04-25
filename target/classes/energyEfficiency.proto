@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+option java_package = "grpc.energyEfficiency";
+option java_multiplefiles = true;
+option jave_outer_classname = "energyEfficiencyImpl";
+
+package energyEfficiency;
+
+// the energyEfficiency service definition
+service energyEfficiency {
+
+	// Light management system
+	// Server streaming method
+	rpc ActivateLights (ActivateLightsRequest) returns (stream ActivateLightsResponse){}
+
+	// Temperature management system
+	// Server streaming method
+	rpc CheckTemperature (TemperatureRequest) returns (stream TemperatureResponse){}
+
+	// Presentation room management system
+	// Unary streaming server method
+	rpc PresRoom (ActivatePresRoomBlindsRequest) returns (stream ActivatePresRoomBlindsResponse)
+}
+
+// message request for ActivateLights
+message  {
+	bool ActivateLights = 1;
+}
+// message response for ActivateLights
+message {
+	bool ActivateLights = 1;
+}
+
+// message request for CheckTemperature
+message  {
+	int32 CheckTemperature = 1;
+}
+// message response for CheckTemperature
+message {
+	int32 CheckTemperature = 1;
+}
+
+// message request for PresRoom
+message  {
+	bool PresRoom = 1;
+}
+// message response for PresRoom
+message {
+	bool PresRoom = 1;
+}
+
+enum ErrorCode {
+	ABOVE_100 = 0;
+	BELOW_1 = 1;
+}
+
+message ErrorResponse {
+	int32 input = 1;
+	ErrorCode error_code = 2;
+}
+

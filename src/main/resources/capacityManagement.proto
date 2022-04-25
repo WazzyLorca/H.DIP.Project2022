@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+option java_package = "grpc.capacityManagement";
+option java_multiplefiles = true;
+option jave_outer_classname = "capacityManagementImpl";
+
+package capacityManagement;
+
+// the capacityManagement service definition
+service capacityManagement {
+
+// Access to building granted with ID
+// unary service method
+rpc CreateIdAccess (IdAccessRequest) returns (IdAccessResponse){}
+
+// Head count of people within the building
+// client streaming server method
+rpc CSCountPeople (UpdateCountPeopleRequest) returns (UpdateCountPeopleResponse){}
+
+// Check to see if a terminal is occupied
+// client streaming server method
+rpc CSTerminalOccupied (stream TerminalOccupiedRequest) returns (TerminalOccupiedResponse){}
+
+}
+
+// message request for CreateIdAccess
+message  {
+	bool CreateIdAccess = 1;
+}
+// message response for CreateIdAccess
+message {
+	bool CreateIdAccess = 1;
+}
+
+// message request for CSCountPeople
+message  {
+	int32 CSCountPeople = 1;
+}
+// message response for CSCountPeople
+message {
+	int32 CSCountPeople = 1;
+}
+
+// message request for CSTerminalOccupied
+message  {
+	bool CSTerminalOccupied = 1;
+}
+// message response for CSTerminalOccupied
+message {
+	bool CSTerminalOccupied = 1;
+}
