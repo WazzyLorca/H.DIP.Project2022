@@ -1,8 +1,8 @@
 syntax = "proto3";
 
 option java_package = "grpc.foresightMaintenance";
-option java_multiplefiles = true;
-option jave_outer_classname = "foresightMaintenanceImpl";
+option java_multiple_files = true;
+option java_outer_classname = "foresightMaintenanceImpl";
 
 package foresightMaintenance;
 
@@ -19,7 +19,7 @@ service foresightMaintenance {
 
 	// checks the Decibel levels
 	// client streaming service method
-	rpc CheckDecibelLevels (stream CheckDecibelLevelsRequest) retusn (stream CheckDecibelLevelsResponse){}
+	rpc CheckDecibelLevels (stream CheckDecibelLevelsRequest) returns (stream CheckDecibelLevelsResponse){}
 
 }
 

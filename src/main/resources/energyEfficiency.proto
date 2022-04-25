@@ -1,8 +1,8 @@
 syntax = "proto3";
 
 option java_package = "grpc.energyEfficiency";
-option java_multiplefiles = true;
-option jave_outer_classname = "energyEfficiencyImpl";
+option java_multiple_files = true;
+option java_outer_classname = "energyEfficiencyImpl";
 
 package energyEfficiency;
 
@@ -19,34 +19,34 @@ service energyEfficiency {
 
 	// Presentation room management system
 	// Unary streaming server method
-	rpc PresRoom (ActivatePresRoomBlindsRequest) returns (stream ActivatePresRoomBlindsResponse)
+	rpc PresRoom (PresRoomRequest) returns (stream PresRoomResponse){}
 }
 
 // message request for ActivateLights
-message  {
-	bool ActivateLights = 1;
+message ActivateLightsRequest {
+	bool lights_on = 1;
 }
 // message response for ActivateLights
-message {
-	bool ActivateLights = 1;
+message ActivateLightsResponse {
+	bool lights_returned = 1;
 }
 
 // message request for CheckTemperature
-message  {
-	int32 CheckTemperature = 1;
+message TemperatureRequest {
+	int32 what_temp = 1;
 }
 // message response for CheckTemperature
-message {
-	int32 CheckTemperature = 1;
+message TemperatureResponse {
+	int32 return_temp = 1;
 }
 
 // message request for PresRoom
-message  {
-	bool PresRoom = 1;
+message PresRoomRequest {
+	bool ActivatePresRoomBlindsRequest = 1;
 }
 // message response for PresRoom
-message {
-	bool PresRoom = 1;
+message PresRoomResponse {
+	bool ActivatePresRoomBlindsResponse = 1;
 }
 
 enum ErrorCode {
