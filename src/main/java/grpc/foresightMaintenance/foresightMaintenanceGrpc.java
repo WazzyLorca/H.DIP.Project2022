@@ -15,6 +15,8 @@ import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
+import io.grpc.stub.StreamObserver;
+
 /**
  * <pre>
  * the foresight maintenance service definition
@@ -214,6 +216,11 @@ public final class foresightMaintenanceGrpc {
                   this, METHODID_CHECK_DECIBEL_LEVELS)))
           .build();
     }
+
+	public void checkCo2Levels(CheckCo2LevelsRequest request, StreamObserver<CheckCo2LevelsRequest> response) {
+		// TODO Auto-generated method stub
+		
+	}
   }
 
   /**

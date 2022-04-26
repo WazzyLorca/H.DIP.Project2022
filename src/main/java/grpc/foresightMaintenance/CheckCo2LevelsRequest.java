@@ -553,6 +553,21 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
+	public void setCo2LevelRoom1(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setCo2LevelRoom2(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setCo2LevelRoom3(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
 
     // @@protoc_insertion_point(builder_scope:foresightMaintenance.CheckCo2LevelsRequest)
   }
