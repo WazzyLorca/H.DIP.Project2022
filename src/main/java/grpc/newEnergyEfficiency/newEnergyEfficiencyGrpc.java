@@ -15,6 +15,9 @@ import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
+import grpc.newForesightManagement.containsString;
+import io.grpc.stub.StreamObserver;
+
 /**
  */
 @javax.annotation.Generated(
@@ -205,6 +208,11 @@ public final class newEnergyEfficiencyGrpc {
                   this, METHODID_GET_HEAT)))
           .build();
     }
+
+	public void getFirstString(containsString request, StreamObserver<containsString> responseObserver) {
+		// TODO Auto-generated method stub
+		
+	}
   }
 
   /**

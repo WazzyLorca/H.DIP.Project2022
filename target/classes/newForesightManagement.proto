@@ -7,17 +7,23 @@ option java_outer_classname = "NewForesightManagementImpl";
 // Service Foresight Management
 service newForesightManagement {
 	//unary
-	//rpc GetFirstString(containsString) returns (containsString){}
+	rpc GetFirstString(containsString) returns (containsString){}
 	//server streaming
 	//rpc GetSecondString(containsString) returns (stream containsString){}
 	//client Streaming
-	rpc SendDecibelLevels(stream containsString) returns (containsString){}
+	//rpc SendDecibelLevels(stream requestDecibel) returns (responseDecibel){}
 	// bi-directional
-	rpc Co2Levels(stream containsString) returns (stream containsString){}
+	//rpc Co2Levels(stream containsString) returns (stream containsString){}
 	// bi-directional
-	rpc ElecUsage(stream containsString) returns (stream containsString){}
+	//rpc ElecUsage(stream containsString) returns (stream containsString){}
 }
 
 message containsString {
 	string firstString = 1;
 }
+//message requestDecibel {
+	//string firstString = 1;
+//}
+//message responseDecibel {
+	//string firstString = 1;
+//}

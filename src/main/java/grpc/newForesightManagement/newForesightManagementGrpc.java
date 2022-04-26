@@ -15,6 +15,8 @@ import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
+import io.grpc.stub.StreamObserver;
+
 /**
  * <pre>
  * Service Foresight Management
@@ -215,6 +217,11 @@ public final class newForesightManagementGrpc {
                   this, METHODID_ELEC_USAGE)))
           .build();
     }
+
+	public void getFirstString(containsString request, StreamObserver<containsString> response) {
+		// TODO Auto-generated method stub
+		
+	}
   }
 
   /**

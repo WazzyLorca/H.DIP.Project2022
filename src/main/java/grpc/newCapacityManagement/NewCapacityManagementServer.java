@@ -3,13 +3,15 @@ package grpc.newCapacityManagement;
 import java.io.IOException;
 
 import grpc.newCapacityManagement.newCapacityManagementGrpc.newCapacityManagementImplBase;
+import grpc.newForesightManagement.containsString;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
+import io.grpc.stub.StreamObserver;
 
 public class NewCapacityManagementServer {
 
 	private Server server;
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 		
 		NewCapacityManagementServer ourServer = new NewCapacityManagementServer();
@@ -17,17 +19,35 @@ public class NewCapacityManagementServer {
 
 	}
 
-	private void start() throws IOException {
+	private void start() throws IOException, InterruptedException {
 		System.out.println("Starting gRPC Server");
 		int port = 50051;
 		
 		server = ServerBuilder.forPort(port).addService(new NewCapacityManagementImpl()).build().start();
-	
+		System.out.println("Server running on port: " + port );
+		
+		
+		server.awaitTermination();
+		
 	}
 	
 	//Extend abstract base class for our own implementation
 	static class NewCapacityManagementImpl extends newCapacityManagementImplBase{
 		
+		@Override // unary
+		public void getFirstString(containsString request, StreamObserver<containsString> responseObserver) {
+			//Find out what was the content of the message sent by the client
+			String firstString = request.getFirstString();
+			System.out.println("Our first request string is: " + firstString);
+			
+			//Now build up response
+			containsString.Builder responseBuilder = containsString.newBuilder();
+			
+			responseBuilder.setFirstString("Our first Response String: " + firstString);
+		
+			responseObserver.onNext(responseBuilder.build());
+			responseObserver.onCompleted();
+		}
 	}
 
 }

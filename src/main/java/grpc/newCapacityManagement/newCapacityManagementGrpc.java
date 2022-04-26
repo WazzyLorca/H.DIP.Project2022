@@ -15,6 +15,9 @@ import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
+import grpc.newForesightManagement.containsString;
+import io.grpc.stub.StreamObserver;
+
 /**
  */
 @javax.annotation.Generated(
@@ -207,6 +210,11 @@ public final class newCapacityManagementGrpc {
                   this, METHODID_SEND_TERMINAL_OCCUPIED)))
           .build();
     }
+
+	public void getFirstString(containsString request, StreamObserver<containsString> responseObserver) {
+		// TODO Auto-generated method stub
+		
+	}
   }
 
   /**
