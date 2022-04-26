@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_package = "grpc.newEnergyEfficiency";
+option java_multiple_files = true;
+option java_outer_classname = "NewnEnergyEfficiencyImpl";
+
+
+service newEnergyEfficiency {
+	//unary - presentation room
+	rpc GetPresRoom(containsString) returns (containsString){}
+	//server streaming
+	rpc GetLights(containsString) returns (stream containsString){}
+	//server streaming
+	rpc GetHeat(containsString) returns (stream containsString){}
+	//client Streaming
+	//rpc SendStringsClientStreaming(stream containsString) returns (containsString){}
+
+}
+
+message containsString {
+	string firstString = 1;
+}

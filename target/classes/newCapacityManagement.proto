@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_package = "grpc.newCapacityManagement";
+option java_multiple_files = true;
+option java_outer_classname = "NewCapacityManagementImpl";
+
+
+service newCapacityManagement {
+	//unary
+	rpc GetIdAccess(containsString) returns (containsString){}
+	//server streaming
+	//rpc GetSecondString(containsString) returns (stream containsString){}
+	//client Streaming
+	rpc SendCountPeople(stream containsString) returns (containsString){}
+	//client Streaming
+	rpc SendTerminalOccupied(stream containsString) returns (containsString){}
+}
+
+message containsString {
+	string firstString = 1;
+}
