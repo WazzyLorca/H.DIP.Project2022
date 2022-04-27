@@ -31,6 +31,7 @@ grpc\newForesightManagement\requestDecibel.class
 grpc\newForesightManagement\requestElecUsage.class
 grpc\newEnergyEfficiency\requestLights.class
 grpc\newEnergyEfficiency\NewEnergyEfficiencyServer.class
+grpc\newCapacityManagement\NewCapacityManagementServer$NewCapacityManagementImpl$1.class
 grpc\newCapacityManagement\responseOccupied$1.class
 grpc\newEnergyEfficiency\newEnergyEfficiencyGrpc$newEnergyEfficiencyStub.class
 grpc\newEnergyEfficiency\NewnEnergyEfficiencyImpl.class
@@ -84,8 +85,10 @@ grpc\newCapacityManagement\newCapacityManagementGrpc.class
 grpc\newForesightManagement\requestCo2Level$Builder.class
 grpc\newEnergyEfficiency\responseLightsOrBuilder.class
 grpc\newEnergyEfficiency\NewnEnergyEfficiencyImpl$1.class
+grpc\newCapacityManagement\NewCapacityManagementClient$2.class
 grpc\newCapacityManagement\newCapacityManagementGrpc$1.class
 grpc\newCapacityManagement\NewCapacityManagementServer.class
+grpc\newForesightManagement\NewForesightManagementClient$1.class
 grpc\newForesightManagement\newForesightManagementGrpc.class
 grpc\newCapacityManagement\newCapacityManagementGrpc$newCapacityManagementBaseDescriptorSupplier.class
 grpc\newForesightManagement\responseElecUsage.class
@@ -101,6 +104,7 @@ grpc\newCapacityManagement\responseCount$1.class
 grpc\newCapacityManagement\containsString.class
 grpc\newCapacityManagement\responseIdOrBuilder.class
 grpc\newForesightManagement\requestDecibel$Builder.class
+grpc\newForesightManagement\NewForesightManagementClient$2.class
 grpc\newForesightManagement\responseCo2Level.class
 grpc\newEnergyEfficiency\containsString$Builder.class
 grpc\newForesightManagement\requestCo2Level.class
@@ -120,6 +124,7 @@ grpc\newCapacityManagement\requestId.class
 grpc\newForesightManagement\newForesightManagementGrpc$MethodHandlers.class
 grpc\newCapacityManagement\requestCount.class
 grpc\newForesightManagement\newForesightManagementGrpc$newForesightManagementBaseDescriptorSupplier.class
+grpc\newForesightManagement\NewForesightManagementClient$3.class
 grpc\newForesightManagement\newForesightManagementGrpc$newForesightManagementFutureStub.class
 grpc\newForesightManagement\newResponse$1.class
 grpc\newCapacityManagement\newCapacityManagementGrpc$newCapacityManagementImplBase.class
@@ -129,5 +134,6 @@ grpc\newForesightManagement\containsString.class
 grpc\newForesightManagement\newForesightManagementGrpc$1.class
 grpc\newCapacityManagement\newCapacityManagementGrpc$MethodHandlers.class
 grpc\newEnergyEfficiency\responseLights$Builder.class
+grpc\newCapacityManagement\NewCapacityManagementClient$1.class
 grpc\newEnergyEfficiency\responseHeat$1.class
 grpc\newCapacityManagement\requestCount$Builder.class

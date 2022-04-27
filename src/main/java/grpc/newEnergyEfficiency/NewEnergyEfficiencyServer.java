@@ -21,7 +21,12 @@ import io.grpc.stub.StreamObserver;
 
 		private void start() throws IOException, InterruptedException {
 			System.out.println("Starting gRPC Energy Efficiency Server");
+			
 			int port = 50051;
+			String service_type = "_grpc._tcp.local.";
+			String service_name = "GrpcServer";
+			EnergyEfficiencyServiceRegistration ssr = new EnergyEfficiencyServiceRegistration();
+			ssr.run(port, service_type, service_name);
 			
 			server = ServerBuilder.forPort(port).addService(new NewEnergyEfficiencyImpl()).build().start();
 			System.out.println("Server running on port: " + port );

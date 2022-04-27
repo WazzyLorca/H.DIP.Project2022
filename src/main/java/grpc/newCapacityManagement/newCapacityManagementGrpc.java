@@ -286,6 +286,11 @@ public final class newCapacityManagementGrpc {
       return blockingUnaryCall(
           getChannel(), getGetIdAccessMethod(), getCallOptions(), request);
     }
+
+	public static containsString getFirstString(containsString request) {
+		// TODO Auto-generated method stub
+		return null;
+	}
   }
 
   /**

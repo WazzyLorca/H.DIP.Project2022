@@ -19,7 +19,12 @@ public class NewForesightManagementServer {
 	}
 	private void start() throws IOException, InterruptedException {
 		System.out.println("Starting Foresight Management Server");
+		
 		int port = 50051;
+		String service_type = "_grpc._tcp.local.";
+		String service_name = "GrpcServer";
+		ForesightManagementServiceRegistration ssr = new ForesightManagementServiceRegistration();
+		ssr.run(port, service_type, service_name);
 		
 		server = ServerBuilder.forPort(port).addService(new NewForesightManagementImpl()).build().start();
 		System.out.println("Server running on port: " + port );
