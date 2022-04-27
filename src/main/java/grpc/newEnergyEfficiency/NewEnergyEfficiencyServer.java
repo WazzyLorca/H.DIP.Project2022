@@ -20,7 +20,7 @@ import io.grpc.stub.StreamObserver;
 		}
 
 		private void start() throws IOException, InterruptedException {
-			System.out.println("Starting gRPC Server");
+			System.out.println("Starting gRPC Energy Efficiency Server");
 			int port = 50051;
 			
 			server = ServerBuilder.forPort(port).addService(new NewEnergyEfficiencyImpl()).build().start();
@@ -36,14 +36,54 @@ import io.grpc.stub.StreamObserver;
 			public void getPresRoom(requestPres request, StreamObserver<responsePres> responseObserver) {
 				//Find out what was the content of the message sent by the client
 				String firstString = request.getFirstString();
-				System.out.println("Our first request string is: " + firstString);
+				System.out.println("Presentation Room request is: " + firstString);
 				
 				//Now build up response
 				responsePres.Builder responseBuilder = responsePres.newBuilder();
 				
 				responseBuilder.setFirstInt(25);
+				//responseBuilder.setFirstString("Unary response");
 			
 				responseObserver.onNext(responseBuilder.build());
+				responseObserver.onCompleted();
+			}
+			@Override // server streaming Lights
+			public void getLights(requestLights request, StreamObserver<responseLights> responseObserver) {
+				//Find out what was the content of the message sent by the client
+				String firstString = request.getFirstString();
+				System.out.println("Lights request is: " + firstString);
+				
+				//Now build up response
+				responseLights.Builder responseBuilder = responseLights.newBuilder();
+				
+				// first message
+				responseBuilder.setFirstInt(25);
+				responseObserver.onNext(responseBuilder.build());
+				// later messages
+				responseObserver.onNext(responseBuilder.build());
+				responseObserver.onNext(responseBuilder.build());
+				responseObserver.onCompleted();
+			}
+			@Override // server streaming Heat
+			public void getHeat(requestHeat request, StreamObserver<responseHeat> responseObserver) {
+				//Find out what was the content of the message sent by the client
+				String firstString = request.getFirstString();
+				System.out.println("Heat request string is: " + firstString);
+				
+				//Now build up response
+				responseHeat.Builder responseBuilder = responseHeat.newBuilder();
+				
+				// add in room numbers..proto file
+				// first message
+				responseBuilder.setFirstInt(15);
+				responseObserver.onNext(responseBuilder.build());
+				// second message
+				responseBuilder.setFirstInt(20);
+				responseObserver.onNext(responseBuilder.build());
+				// third message
+				responseBuilder.setFirstInt(25);
+				responseObserver.onNext(responseBuilder.build());
+				
 				responseObserver.onCompleted();
 			}
 		}
