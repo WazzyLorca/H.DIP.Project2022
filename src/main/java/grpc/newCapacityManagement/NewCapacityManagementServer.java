@@ -38,7 +38,7 @@ public class NewCapacityManagementServer {
 		public void getIdAccess(requestId request, StreamObserver<responseId> responseObserver) {
 			//Find out what was the content of the message sent by the client
 			String firstString = request.getFirstString();
-			System.out.println("Our first request string is: " + firstString);
+			System.out.println("Our first request access is: " + firstString);
 			
 			//Now build up response
 			responseId.Builder responseBuilder = responseId.newBuilder();

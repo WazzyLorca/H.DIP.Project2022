@@ -19,6 +19,7 @@ service newCapacityManagement {
 message containsString {
 	string firstString = 1;
 }
+// Unary Get Id Access
 message requestId {
 	string firstString = 1;
 }
