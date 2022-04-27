@@ -19,6 +19,11 @@ public final class NewForesightManagementImpl {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_containsString_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_newResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_newResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -29,14 +34,13 @@ public final class NewForesightManagementImpl {
   static {
     java.lang.String[] descriptorData = {
       "\n\034newForesightManagement.proto\"%\n\016contai" +
-      "nsString\022\023\n\013firstString\030\001 \001(\t2\275\001\n\026newFor" +
-      "esightManagement\0229\n\021SendDecibelLevels\022\017." +
-      "containsString\032\017.containsString\"\000(\001\0223\n\tC" +
-      "o2Levels\022\017.containsString\032\017.containsStri" +
-      "ng\"\000(\0010\001\0223\n\tElecUsage\022\017.containsString\032\017" +
-      ".containsString\"\000(\0010\001B;\n\033grpc.newForesig" +
-      "htManagementB\032NewForesightManagementImpl" +
-      "P\001b\006proto3"
+      "nsString\022\023\n\013firstString\030\001 \001(\t\"\037\n\013newResp" +
+      "onse\022\020\n\010firstInt\030\001 \001(\0052~\n\026newForesightMa" +
+      "nagement\0224\n\016GetFirstString\022\017.containsStr" +
+      "ing\032\017.containsString\"\000\022.\n\013GetFirstInt\022\017." +
+      "containsString\032\014.newResponse\"\000B;\n\033grpc.n" +
+      "ewForesightManagementB\032NewForesightManag" +
+      "ementImplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -56,6 +60,12 @@ public final class NewForesightManagementImpl {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_containsString_descriptor,
         new java.lang.String[] { "FirstString", });
+    internal_static_newResponse_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_newResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_newResponse_descriptor,
+        new java.lang.String[] { "FirstInt", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

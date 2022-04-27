@@ -19,6 +19,16 @@ public final class NewnEnergyEfficiencyImpl {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_containsString_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_requestPres_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_requestPres_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_responsePres_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_responsePres_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -29,13 +39,16 @@ public final class NewnEnergyEfficiencyImpl {
   static {
     java.lang.String[] descriptorData = {
       "\n\031newEnergyEfficiency.proto\"%\n\016containsS" +
-      "tring\022\023\n\013firstString\030\001 \001(\t2\254\001\n\023newEnergy" +
-      "Efficiency\0221\n\013GetPresRoom\022\017.containsStri" +
-      "ng\032\017.containsString\"\000\0221\n\tGetLights\022\017.con" +
-      "tainsString\032\017.containsString\"\0000\001\022/\n\007GetH" +
-      "eat\022\017.containsString\032\017.containsString\"\0000" +
-      "\001B6\n\030grpc.newEnergyEfficiencyB\030NewnEnerg" +
-      "yEfficiencyImplP\001b\006proto3"
+      "tring\022\023\n\013firstString\030\001 \001(\t\"\"\n\013requestPre" +
+      "s\022\023\n\013firstString\030\001 \001(\t\" \n\014responsePres\022\020" +
+      "\n\010firstInt\030\001 \001(\0052\335\001\n\023newEnergyEfficiency" +
+      "\0224\n\016GetFirstString\022\017.containsString\032\017.co" +
+      "ntainsString\"\000\022,\n\013GetPresRoom\022\014.requestP" +
+      "res\032\r.responsePres\"\000\0221\n\tGetLights\022\017.cont" +
+      "ainsString\032\017.containsString\"\0000\001\022/\n\007GetHe" +
+      "at\022\017.containsString\032\017.containsString\"\0000\001" +
+      "B6\n\030grpc.newEnergyEfficiencyB\030NewnEnergy" +
+      "EfficiencyImplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -55,6 +68,18 @@ public final class NewnEnergyEfficiencyImpl {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_containsString_descriptor,
         new java.lang.String[] { "FirstString", });
+    internal_static_requestPres_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_requestPres_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_requestPres_descriptor,
+        new java.lang.String[] { "FirstString", });
+    internal_static_responsePres_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_responsePres_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_responsePres_descriptor,
+        new java.lang.String[] { "FirstInt", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

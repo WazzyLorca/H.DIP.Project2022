@@ -16,10 +16,15 @@ service newForesightManagement {
 	//rpc Co2Levels(stream containsString) returns (stream containsString){}
 	// bi-directional
 	//rpc ElecUsage(stream containsString) returns (stream containsString){}
+	// get int
+	rpc GetFirstInt(containsString) returns (newResponse){}
 }
 
 message containsString {
 	string firstString = 1;
+}
+message newResponse{
+	int32 firstInt = 1;
 }
 //message requestDecibel {
 	//string firstString = 1;

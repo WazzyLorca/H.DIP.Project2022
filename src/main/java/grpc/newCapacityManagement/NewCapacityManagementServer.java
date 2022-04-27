@@ -34,16 +34,16 @@ public class NewCapacityManagementServer {
 	//Extend abstract base class for our own implementation
 	static class NewCapacityManagementImpl extends newCapacityManagementImplBase{
 		
-		@Override // unary
-		public void getFirstString(containsString request, StreamObserver<containsString> responseObserver) {
+		@Override // unary ID Access
+		public void getIdAccess(requestId request, StreamObserver<responseId> responseObserver) {
 			//Find out what was the content of the message sent by the client
 			String firstString = request.getFirstString();
 			System.out.println("Our first request string is: " + firstString);
 			
 			//Now build up response
-			containsString.Builder responseBuilder = containsString.newBuilder();
+			responseId.Builder responseBuilder = responseId.newBuilder();
 			
-			responseBuilder.setFirstString("Our first Response String: " + firstString);
+			responseBuilder.setFirstInt(25);
 		
 			responseObserver.onNext(responseBuilder.build());
 			responseObserver.onCompleted();

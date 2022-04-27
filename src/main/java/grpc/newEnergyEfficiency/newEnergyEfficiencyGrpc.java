@@ -15,9 +15,6 @@ import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-import grpc.newForesightManagement.containsString;
-import io.grpc.stub.StreamObserver;
-
 /**
  */
 @javax.annotation.Generated(
@@ -31,29 +28,61 @@ public final class newEnergyEfficiencyGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<grpc.newEnergyEfficiency.containsString,
-      grpc.newEnergyEfficiency.containsString> getGetPresRoomMethod;
+      grpc.newEnergyEfficiency.containsString> getGetFirstStringMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetPresRoom",
+      fullMethodName = SERVICE_NAME + '/' + "GetFirstString",
       requestType = grpc.newEnergyEfficiency.containsString.class,
       responseType = grpc.newEnergyEfficiency.containsString.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<grpc.newEnergyEfficiency.containsString,
-      grpc.newEnergyEfficiency.containsString> getGetPresRoomMethod() {
-    io.grpc.MethodDescriptor<grpc.newEnergyEfficiency.containsString, grpc.newEnergyEfficiency.containsString> getGetPresRoomMethod;
-    if ((getGetPresRoomMethod = newEnergyEfficiencyGrpc.getGetPresRoomMethod) == null) {
+      grpc.newEnergyEfficiency.containsString> getGetFirstStringMethod() {
+    io.grpc.MethodDescriptor<grpc.newEnergyEfficiency.containsString, grpc.newEnergyEfficiency.containsString> getGetFirstStringMethod;
+    if ((getGetFirstStringMethod = newEnergyEfficiencyGrpc.getGetFirstStringMethod) == null) {
       synchronized (newEnergyEfficiencyGrpc.class) {
-        if ((getGetPresRoomMethod = newEnergyEfficiencyGrpc.getGetPresRoomMethod) == null) {
-          newEnergyEfficiencyGrpc.getGetPresRoomMethod = getGetPresRoomMethod = 
+        if ((getGetFirstStringMethod = newEnergyEfficiencyGrpc.getGetFirstStringMethod) == null) {
+          newEnergyEfficiencyGrpc.getGetFirstStringMethod = getGetFirstStringMethod = 
               io.grpc.MethodDescriptor.<grpc.newEnergyEfficiency.containsString, grpc.newEnergyEfficiency.containsString>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "newEnergyEfficiency", "GetPresRoom"))
+                  "newEnergyEfficiency", "GetFirstString"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   grpc.newEnergyEfficiency.containsString.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   grpc.newEnergyEfficiency.containsString.getDefaultInstance()))
+                  .setSchemaDescriptor(new newEnergyEfficiencyMethodDescriptorSupplier("GetFirstString"))
+                  .build();
+          }
+        }
+     }
+     return getGetFirstStringMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<grpc.newEnergyEfficiency.requestPres,
+      grpc.newEnergyEfficiency.responsePres> getGetPresRoomMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetPresRoom",
+      requestType = grpc.newEnergyEfficiency.requestPres.class,
+      responseType = grpc.newEnergyEfficiency.responsePres.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<grpc.newEnergyEfficiency.requestPres,
+      grpc.newEnergyEfficiency.responsePres> getGetPresRoomMethod() {
+    io.grpc.MethodDescriptor<grpc.newEnergyEfficiency.requestPres, grpc.newEnergyEfficiency.responsePres> getGetPresRoomMethod;
+    if ((getGetPresRoomMethod = newEnergyEfficiencyGrpc.getGetPresRoomMethod) == null) {
+      synchronized (newEnergyEfficiencyGrpc.class) {
+        if ((getGetPresRoomMethod = newEnergyEfficiencyGrpc.getGetPresRoomMethod) == null) {
+          newEnergyEfficiencyGrpc.getGetPresRoomMethod = getGetPresRoomMethod = 
+              io.grpc.MethodDescriptor.<grpc.newEnergyEfficiency.requestPres, grpc.newEnergyEfficiency.responsePres>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "newEnergyEfficiency", "GetPresRoom"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  grpc.newEnergyEfficiency.requestPres.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  grpc.newEnergyEfficiency.responsePres.getDefaultInstance()))
                   .setSchemaDescriptor(new newEnergyEfficiencyMethodDescriptorSupplier("GetPresRoom"))
                   .build();
           }
@@ -155,11 +184,21 @@ public final class newEnergyEfficiencyGrpc {
 
     /**
      * <pre>
+     *unary
+     * </pre>
+     */
+    public void getFirstString(grpc.newEnergyEfficiency.containsString request,
+        io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.containsString> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetFirstStringMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      *unary - presentation room
      * </pre>
      */
-    public void getPresRoom(grpc.newEnergyEfficiency.containsString request,
-        io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.containsString> responseObserver) {
+    public void getPresRoom(grpc.newEnergyEfficiency.requestPres request,
+        io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.responsePres> responseObserver) {
       asyncUnimplementedUnaryCall(getGetPresRoomMethod(), responseObserver);
     }
 
@@ -186,11 +225,18 @@ public final class newEnergyEfficiencyGrpc {
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetPresRoomMethod(),
+            getGetFirstStringMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 grpc.newEnergyEfficiency.containsString,
                 grpc.newEnergyEfficiency.containsString>(
+                  this, METHODID_GET_FIRST_STRING)))
+          .addMethod(
+            getGetPresRoomMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                grpc.newEnergyEfficiency.requestPres,
+                grpc.newEnergyEfficiency.responsePres>(
                   this, METHODID_GET_PRES_ROOM)))
           .addMethod(
             getGetLightsMethod(),
@@ -208,11 +254,6 @@ public final class newEnergyEfficiencyGrpc {
                   this, METHODID_GET_HEAT)))
           .build();
     }
-
-	public void getFirstString(containsString request, StreamObserver<containsString> responseObserver) {
-		// TODO Auto-generated method stub
-		
-	}
   }
 
   /**
@@ -235,11 +276,22 @@ public final class newEnergyEfficiencyGrpc {
 
     /**
      * <pre>
+     *unary
+     * </pre>
+     */
+    public void getFirstString(grpc.newEnergyEfficiency.containsString request,
+        io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.containsString> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetFirstStringMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      *unary - presentation room
      * </pre>
      */
-    public void getPresRoom(grpc.newEnergyEfficiency.containsString request,
-        io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.containsString> responseObserver) {
+    public void getPresRoom(grpc.newEnergyEfficiency.requestPres request,
+        io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.responsePres> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetPresRoomMethod(), getCallOptions()), request, responseObserver);
     }
@@ -287,10 +339,20 @@ public final class newEnergyEfficiencyGrpc {
 
     /**
      * <pre>
+     *unary
+     * </pre>
+     */
+    public grpc.newEnergyEfficiency.containsString getFirstString(grpc.newEnergyEfficiency.containsString request) {
+      return blockingUnaryCall(
+          getChannel(), getGetFirstStringMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      *unary - presentation room
      * </pre>
      */
-    public grpc.newEnergyEfficiency.containsString getPresRoom(grpc.newEnergyEfficiency.containsString request) {
+    public grpc.newEnergyEfficiency.responsePres getPresRoom(grpc.newEnergyEfficiency.requestPres request) {
       return blockingUnaryCall(
           getChannel(), getGetPresRoomMethod(), getCallOptions(), request);
     }
@@ -338,19 +400,31 @@ public final class newEnergyEfficiencyGrpc {
 
     /**
      * <pre>
+     *unary
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<grpc.newEnergyEfficiency.containsString> getFirstString(
+        grpc.newEnergyEfficiency.containsString request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetFirstStringMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      *unary - presentation room
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<grpc.newEnergyEfficiency.containsString> getPresRoom(
-        grpc.newEnergyEfficiency.containsString request) {
+    public com.google.common.util.concurrent.ListenableFuture<grpc.newEnergyEfficiency.responsePres> getPresRoom(
+        grpc.newEnergyEfficiency.requestPres request) {
       return futureUnaryCall(
           getChannel().newCall(getGetPresRoomMethod(), getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_GET_PRES_ROOM = 0;
-  private static final int METHODID_GET_LIGHTS = 1;
-  private static final int METHODID_GET_HEAT = 2;
+  private static final int METHODID_GET_FIRST_STRING = 0;
+  private static final int METHODID_GET_PRES_ROOM = 1;
+  private static final int METHODID_GET_LIGHTS = 2;
+  private static final int METHODID_GET_HEAT = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -369,9 +443,13 @@ public final class newEnergyEfficiencyGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_GET_PRES_ROOM:
-          serviceImpl.getPresRoom((grpc.newEnergyEfficiency.containsString) request,
+        case METHODID_GET_FIRST_STRING:
+          serviceImpl.getFirstString((grpc.newEnergyEfficiency.containsString) request,
               (io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.containsString>) responseObserver);
+          break;
+        case METHODID_GET_PRES_ROOM:
+          serviceImpl.getPresRoom((grpc.newEnergyEfficiency.requestPres) request,
+              (io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.responsePres>) responseObserver);
           break;
         case METHODID_GET_LIGHTS:
           serviceImpl.getLights((grpc.newEnergyEfficiency.containsString) request,
@@ -442,6 +520,7 @@ public final class newEnergyEfficiencyGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new newEnergyEfficiencyFileDescriptorSupplier())
+              .addMethod(getGetFirstStringMethod())
               .addMethod(getGetPresRoomMethod())
               .addMethod(getGetLightsMethod())
               .addMethod(getGetHeatMethod())

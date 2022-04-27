@@ -32,16 +32,16 @@ import io.grpc.stub.StreamObserver;
 		//Extend abstract base class for our own implementation
 		static class NewEnergyEfficiencyImpl extends newEnergyEfficiencyImplBase{
 			
-			@Override // unary
-			public void getFirstString(containsString request, StreamObserver<containsString> responseObserver) {
+			@Override // unary Presentation Room
+			public void getPresRoom(requestPres request, StreamObserver<responsePres> responseObserver) {
 				//Find out what was the content of the message sent by the client
 				String firstString = request.getFirstString();
 				System.out.println("Our first request string is: " + firstString);
 				
 				//Now build up response
-				containsString.Builder responseBuilder = containsString.newBuilder();
+				responsePres.Builder responseBuilder = responsePres.newBuilder();
 				
-				responseBuilder.setFirstString("Our first Response String: " + firstString);
+				responseBuilder.setFirstInt(25);
 			
 				responseObserver.onNext(responseBuilder.build());
 				responseObserver.onCompleted();

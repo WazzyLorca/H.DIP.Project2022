@@ -6,8 +6,10 @@ option java_outer_classname = "NewnEnergyEfficiencyImpl";
 
 
 service newEnergyEfficiency {
+	//unary
+	rpc GetFirstString(containsString) returns (containsString){}
 	//unary - presentation room
-	rpc GetPresRoom(containsString) returns (containsString){}
+	rpc GetPresRoom(requestPres) returns (responsePres){}
 	//server streaming
 	rpc GetLights(containsString) returns (stream containsString){}
 	//server streaming
@@ -19,4 +21,11 @@ service newEnergyEfficiency {
 
 message containsString {
 	string firstString = 1;
+}
+// Unary message Presentation Room
+message requestPres {
+	string firstString = 1;
+}
+message responsePres {
+	int32 firstInt = 1;
 }

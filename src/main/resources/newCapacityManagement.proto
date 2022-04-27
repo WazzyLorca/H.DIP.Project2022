@@ -7,7 +7,7 @@ option java_outer_classname = "NewCapacityManagementImpl";
 
 service newCapacityManagement {
 	//unary
-	rpc GetIdAccess(containsString) returns (containsString){}
+	rpc GetIdAccess(requestId) returns (responseId){}
 	//server streaming
 	//rpc GetSecondString(containsString) returns (stream containsString){}
 	//client Streaming
@@ -18,4 +18,10 @@ service newCapacityManagement {
 
 message containsString {
 	string firstString = 1;
+}
+message requestId {
+	string firstString = 1;
+}
+message responseId {
+	int32 firstInt = 1;
 }

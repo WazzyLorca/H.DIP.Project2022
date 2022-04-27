@@ -19,6 +19,16 @@ public final class NewCapacityManagementImpl {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_containsString_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_requestId_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_requestId_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_responseId_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_responseId_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -29,14 +39,15 @@ public final class NewCapacityManagementImpl {
   static {
     java.lang.String[] descriptorData = {
       "\n\033newCapacityManagement.proto\"%\n\016contain" +
-      "sString\022\023\n\013firstString\030\001 \001(\t2\301\001\n\025newCapa" +
-      "cityManagement\0221\n\013GetIdAccess\022\017.contains" +
-      "String\032\017.containsString\"\000\0227\n\017SendCountPe" +
-      "ople\022\017.containsString\032\017.containsString\"\000" +
-      "(\001\022<\n\024SendTerminalOccupied\022\017.containsStr" +
-      "ing\032\017.containsString\"\000(\001B9\n\032grpc.newCapa" +
-      "cityManagementB\031NewCapacityManagementImp" +
-      "lP\001b\006proto3"
+      "sString\022\023\n\013firstString\030\001 \001(\t\" \n\trequestI" +
+      "d\022\023\n\013firstString\030\001 \001(\t\"\036\n\nresponseId\022\020\n\010" +
+      "firstInt\030\001 \001(\0052\270\001\n\025newCapacityManagement" +
+      "\022(\n\013GetIdAccess\022\n.requestId\032\013.responseId" +
+      "\"\000\0227\n\017SendCountPeople\022\017.containsString\032\017" +
+      ".containsString\"\000(\001\022<\n\024SendTerminalOccup" +
+      "ied\022\017.containsString\032\017.containsString\"\000(" +
+      "\001B9\n\032grpc.newCapacityManagementB\031NewCapa" +
+      "cityManagementImplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -56,6 +67,18 @@ public final class NewCapacityManagementImpl {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_containsString_descriptor,
         new java.lang.String[] { "FirstString", });
+    internal_static_requestId_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_requestId_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_requestId_descriptor,
+        new java.lang.String[] { "FirstString", });
+    internal_static_responseId_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_responseId_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_responseId_descriptor,
+        new java.lang.String[] { "FirstInt", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -15,9 +15,6 @@ import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-import grpc.newForesightManagement.containsString;
-import io.grpc.stub.StreamObserver;
-
 /**
  */
 @javax.annotation.Generated(
@@ -30,30 +27,30 @@ public final class newCapacityManagementGrpc {
   public static final String SERVICE_NAME = "newCapacityManagement";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<grpc.newCapacityManagement.containsString,
-      grpc.newCapacityManagement.containsString> getGetIdAccessMethod;
+  private static volatile io.grpc.MethodDescriptor<grpc.newCapacityManagement.requestId,
+      grpc.newCapacityManagement.responseId> getGetIdAccessMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetIdAccess",
-      requestType = grpc.newCapacityManagement.containsString.class,
-      responseType = grpc.newCapacityManagement.containsString.class,
+      requestType = grpc.newCapacityManagement.requestId.class,
+      responseType = grpc.newCapacityManagement.responseId.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<grpc.newCapacityManagement.containsString,
-      grpc.newCapacityManagement.containsString> getGetIdAccessMethod() {
-    io.grpc.MethodDescriptor<grpc.newCapacityManagement.containsString, grpc.newCapacityManagement.containsString> getGetIdAccessMethod;
+  public static io.grpc.MethodDescriptor<grpc.newCapacityManagement.requestId,
+      grpc.newCapacityManagement.responseId> getGetIdAccessMethod() {
+    io.grpc.MethodDescriptor<grpc.newCapacityManagement.requestId, grpc.newCapacityManagement.responseId> getGetIdAccessMethod;
     if ((getGetIdAccessMethod = newCapacityManagementGrpc.getGetIdAccessMethod) == null) {
       synchronized (newCapacityManagementGrpc.class) {
         if ((getGetIdAccessMethod = newCapacityManagementGrpc.getGetIdAccessMethod) == null) {
           newCapacityManagementGrpc.getGetIdAccessMethod = getGetIdAccessMethod = 
-              io.grpc.MethodDescriptor.<grpc.newCapacityManagement.containsString, grpc.newCapacityManagement.containsString>newBuilder()
+              io.grpc.MethodDescriptor.<grpc.newCapacityManagement.requestId, grpc.newCapacityManagement.responseId>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "newCapacityManagement", "GetIdAccess"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  grpc.newCapacityManagement.containsString.getDefaultInstance()))
+                  grpc.newCapacityManagement.requestId.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  grpc.newCapacityManagement.containsString.getDefaultInstance()))
+                  grpc.newCapacityManagement.responseId.getDefaultInstance()))
                   .setSchemaDescriptor(new newCapacityManagementMethodDescriptorSupplier("GetIdAccess"))
                   .build();
           }
@@ -158,8 +155,8 @@ public final class newCapacityManagementGrpc {
      *unary
      * </pre>
      */
-    public void getIdAccess(grpc.newCapacityManagement.containsString request,
-        io.grpc.stub.StreamObserver<grpc.newCapacityManagement.containsString> responseObserver) {
+    public void getIdAccess(grpc.newCapacityManagement.requestId request,
+        io.grpc.stub.StreamObserver<grpc.newCapacityManagement.responseId> responseObserver) {
       asyncUnimplementedUnaryCall(getGetIdAccessMethod(), responseObserver);
     }
 
@@ -191,8 +188,8 @@ public final class newCapacityManagementGrpc {
             getGetIdAccessMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                grpc.newCapacityManagement.containsString,
-                grpc.newCapacityManagement.containsString>(
+                grpc.newCapacityManagement.requestId,
+                grpc.newCapacityManagement.responseId>(
                   this, METHODID_GET_ID_ACCESS)))
           .addMethod(
             getSendCountPeopleMethod(),
@@ -210,11 +207,6 @@ public final class newCapacityManagementGrpc {
                   this, METHODID_SEND_TERMINAL_OCCUPIED)))
           .build();
     }
-
-	public void getFirstString(containsString request, StreamObserver<containsString> responseObserver) {
-		// TODO Auto-generated method stub
-		
-	}
   }
 
   /**
@@ -240,8 +232,8 @@ public final class newCapacityManagementGrpc {
      *unary
      * </pre>
      */
-    public void getIdAccess(grpc.newCapacityManagement.containsString request,
-        io.grpc.stub.StreamObserver<grpc.newCapacityManagement.containsString> responseObserver) {
+    public void getIdAccess(grpc.newCapacityManagement.requestId request,
+        io.grpc.stub.StreamObserver<grpc.newCapacityManagement.responseId> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetIdAccessMethod(), getCallOptions()), request, responseObserver);
     }
@@ -294,7 +286,7 @@ public final class newCapacityManagementGrpc {
      *unary
      * </pre>
      */
-    public grpc.newCapacityManagement.containsString getIdAccess(grpc.newCapacityManagement.containsString request) {
+    public grpc.newCapacityManagement.responseId getIdAccess(grpc.newCapacityManagement.requestId request) {
       return blockingUnaryCall(
           getChannel(), getGetIdAccessMethod(), getCallOptions(), request);
     }
@@ -323,8 +315,8 @@ public final class newCapacityManagementGrpc {
      *unary
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<grpc.newCapacityManagement.containsString> getIdAccess(
-        grpc.newCapacityManagement.containsString request) {
+    public com.google.common.util.concurrent.ListenableFuture<grpc.newCapacityManagement.responseId> getIdAccess(
+        grpc.newCapacityManagement.requestId request) {
       return futureUnaryCall(
           getChannel().newCall(getGetIdAccessMethod(), getCallOptions()), request);
     }
@@ -352,8 +344,8 @@ public final class newCapacityManagementGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_ID_ACCESS:
-          serviceImpl.getIdAccess((grpc.newCapacityManagement.containsString) request,
-              (io.grpc.stub.StreamObserver<grpc.newCapacityManagement.containsString>) responseObserver);
+          serviceImpl.getIdAccess((grpc.newCapacityManagement.requestId) request,
+              (io.grpc.stub.StreamObserver<grpc.newCapacityManagement.responseId>) responseObserver);
           break;
         default:
           throw new AssertionError();
