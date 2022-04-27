@@ -33,10 +33,12 @@ public class NewCapacityManagementClient {
 		// the stub is a local representation of the remote object
 		newCapacityManagementBlockingStub bstub = newCapacityManagementGrpc.newBlockingStub(newChannel);
 		
+		// Now we can call the server and get a response
 		responseId response = bstub.getIdAccess(rId);
 		
 		System.out.println(response.getFirstInt());
 		
+		// Clean up: shutdown the channel
 		newChannel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
 	
 	}

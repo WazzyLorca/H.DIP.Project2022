@@ -10,12 +10,10 @@ service newEnergyEfficiency {
 	rpc GetFirstString(containsString) returns (containsString){}
 	//unary - presentation room
 	rpc GetPresRoom(requestPres) returns (responsePres){}
-	//server streaming
-	rpc GetLights(containsString) returns (stream containsString){}
-	//server streaming
-	rpc GetHeat(containsString) returns (stream containsString){}
-	//client Streaming
-	//rpc SendStringsClientStreaming(stream containsString) returns (containsString){}
+	//server streaming Lights
+	rpc GetLights(requestLights) returns (stream responseLights){}
+	//server streaming Heat
+	rpc GetHeat(requestHeat) returns (stream responseHeat){}
 
 }
 
@@ -27,5 +25,19 @@ message requestPres {
 	string firstString = 1;
 }
 message responsePres {
+	int32 firstInt = 1;
+}
+// ServerStreaming message Lights
+message requestLights {
+	string firstString = 1;
+}
+message responseLights {
+	int32 firstInt = 1;
+}
+// ServerStreaming message Heat
+message requestHeat {
+	string firstString = 1;
+}
+message responseHeat {
 	int32 firstInt = 1;
 }

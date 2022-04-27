@@ -20,7 +20,7 @@ public class NewCapacityManagementServer {
 	}
 
 	private void start() throws IOException, InterruptedException {
-		System.out.println("Starting gRPC Server");
+		System.out.println("Starting gRPC Capacity Management Server");
 		int port = 50051;
 		
 		server = ServerBuilder.forPort(port).addService(new NewCapacityManagementImpl()).build().start();
@@ -38,7 +38,7 @@ public class NewCapacityManagementServer {
 		public void getIdAccess(requestId request, StreamObserver<responseId> responseObserver) {
 			//Find out what was the content of the message sent by the client
 			String firstString = request.getFirstString();
-			System.out.println("Our first request access is: " + firstString);
+			System.out.println("Our Id request access is: " + firstString);
 			
 			//Now build up response
 			responseId.Builder responseBuilder = responseId.newBuilder();

@@ -8,27 +8,44 @@ option java_outer_classname = "NewForesightManagementImpl";
 service newForesightManagement {
 	//unary
 	rpc GetFirstString(containsString) returns (containsString){}
-	//server streaming
-	//rpc GetSecondString(containsString) returns (stream containsString){}
-	//client Streaming
-	//rpc SendDecibelLevels(stream requestDecibel) returns (responseDecibel){}
-	// bi-directional
-	//rpc Co2Levels(stream containsString) returns (stream containsString){}
-	// bi-directional
-	//rpc ElecUsage(stream containsString) returns (stream containsString){}
-	// get int
 	rpc GetFirstInt(containsString) returns (newResponse){}
-}
+	//client Streaming
+	rpc GetDecibelLevels(stream requestDecibel) returns (responseDecibel){}
+	// bi-directional
+	rpc GetCo2Levels(stream requestCo2Level) returns (stream responseCo2Level){}
+	// bi-directional
+	rpc GetElecUsage(stream requestElecUsage) returns (stream responseElecUsage){}
 
+}
+// Messages request & response for gRPC services
+// first one is generic,. must change. in
 message containsString {
 	string firstString = 1;
 }
 message newResponse{
 	int32 firstInt = 1;
 }
-//message requestDecibel {
-	//string firstString = 1;
-//}
-//message responseDecibel {
-	//string firstString = 1;
-//}
+
+// client streaming Decibel Levels
+message requestDecibel {
+	string firstString = 1;
+}
+message responseDecibel {
+	int32 firstInt = 1;
+}
+// bi-directional Co2 Levels
+message requestCo2Level {
+	string firstString = 1;
+}
+message responseCo2Level {
+	int32 first32 = 1;
+}
+// bi-directional Electricity Usage
+message requestElecUsage {
+	string firstString = 1;
+}
+// bi-directional Electricity Usage
+message responseElecUsage {
+	int32 first32 = 1;
+}
+

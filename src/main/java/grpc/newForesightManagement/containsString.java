@@ -4,6 +4,11 @@
 package grpc.newForesightManagement;
 
 /**
+ * <pre>
+ * Messages request &amp; response for gRPC services
+ * first one is generic,. must change. in
+ * </pre>
+ *
  * Protobuf type {@code containsString}
  */
 public  final class containsString extends
@@ -271,6 +276,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Messages request &amp; response for gRPC services
+   * first one is generic,. must change. in
+   * </pre>
+   *
    * Protobuf type {@code containsString}
    */
   public static final class Builder extends

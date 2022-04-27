@@ -59,30 +59,30 @@ public final class newCapacityManagementGrpc {
      return getGetIdAccessMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<grpc.newCapacityManagement.containsString,
-      grpc.newCapacityManagement.containsString> getSendCountPeopleMethod;
+  private static volatile io.grpc.MethodDescriptor<grpc.newCapacityManagement.requestCount,
+      grpc.newCapacityManagement.responseCount> getSendCountPeopleMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "SendCountPeople",
-      requestType = grpc.newCapacityManagement.containsString.class,
-      responseType = grpc.newCapacityManagement.containsString.class,
+      requestType = grpc.newCapacityManagement.requestCount.class,
+      responseType = grpc.newCapacityManagement.responseCount.class,
       methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
-  public static io.grpc.MethodDescriptor<grpc.newCapacityManagement.containsString,
-      grpc.newCapacityManagement.containsString> getSendCountPeopleMethod() {
-    io.grpc.MethodDescriptor<grpc.newCapacityManagement.containsString, grpc.newCapacityManagement.containsString> getSendCountPeopleMethod;
+  public static io.grpc.MethodDescriptor<grpc.newCapacityManagement.requestCount,
+      grpc.newCapacityManagement.responseCount> getSendCountPeopleMethod() {
+    io.grpc.MethodDescriptor<grpc.newCapacityManagement.requestCount, grpc.newCapacityManagement.responseCount> getSendCountPeopleMethod;
     if ((getSendCountPeopleMethod = newCapacityManagementGrpc.getSendCountPeopleMethod) == null) {
       synchronized (newCapacityManagementGrpc.class) {
         if ((getSendCountPeopleMethod = newCapacityManagementGrpc.getSendCountPeopleMethod) == null) {
           newCapacityManagementGrpc.getSendCountPeopleMethod = getSendCountPeopleMethod = 
-              io.grpc.MethodDescriptor.<grpc.newCapacityManagement.containsString, grpc.newCapacityManagement.containsString>newBuilder()
+              io.grpc.MethodDescriptor.<grpc.newCapacityManagement.requestCount, grpc.newCapacityManagement.responseCount>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(
                   "newCapacityManagement", "SendCountPeople"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  grpc.newCapacityManagement.containsString.getDefaultInstance()))
+                  grpc.newCapacityManagement.requestCount.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  grpc.newCapacityManagement.containsString.getDefaultInstance()))
+                  grpc.newCapacityManagement.responseCount.getDefaultInstance()))
                   .setSchemaDescriptor(new newCapacityManagementMethodDescriptorSupplier("SendCountPeople"))
                   .build();
           }
@@ -91,30 +91,30 @@ public final class newCapacityManagementGrpc {
      return getSendCountPeopleMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<grpc.newCapacityManagement.containsString,
-      grpc.newCapacityManagement.containsString> getSendTerminalOccupiedMethod;
+  private static volatile io.grpc.MethodDescriptor<grpc.newCapacityManagement.requestOccupied,
+      grpc.newCapacityManagement.responseOccupied> getSendTerminalOccupiedMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "SendTerminalOccupied",
-      requestType = grpc.newCapacityManagement.containsString.class,
-      responseType = grpc.newCapacityManagement.containsString.class,
+      requestType = grpc.newCapacityManagement.requestOccupied.class,
+      responseType = grpc.newCapacityManagement.responseOccupied.class,
       methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
-  public static io.grpc.MethodDescriptor<grpc.newCapacityManagement.containsString,
-      grpc.newCapacityManagement.containsString> getSendTerminalOccupiedMethod() {
-    io.grpc.MethodDescriptor<grpc.newCapacityManagement.containsString, grpc.newCapacityManagement.containsString> getSendTerminalOccupiedMethod;
+  public static io.grpc.MethodDescriptor<grpc.newCapacityManagement.requestOccupied,
+      grpc.newCapacityManagement.responseOccupied> getSendTerminalOccupiedMethod() {
+    io.grpc.MethodDescriptor<grpc.newCapacityManagement.requestOccupied, grpc.newCapacityManagement.responseOccupied> getSendTerminalOccupiedMethod;
     if ((getSendTerminalOccupiedMethod = newCapacityManagementGrpc.getSendTerminalOccupiedMethod) == null) {
       synchronized (newCapacityManagementGrpc.class) {
         if ((getSendTerminalOccupiedMethod = newCapacityManagementGrpc.getSendTerminalOccupiedMethod) == null) {
           newCapacityManagementGrpc.getSendTerminalOccupiedMethod = getSendTerminalOccupiedMethod = 
-              io.grpc.MethodDescriptor.<grpc.newCapacityManagement.containsString, grpc.newCapacityManagement.containsString>newBuilder()
+              io.grpc.MethodDescriptor.<grpc.newCapacityManagement.requestOccupied, grpc.newCapacityManagement.responseOccupied>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(
                   "newCapacityManagement", "SendTerminalOccupied"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  grpc.newCapacityManagement.containsString.getDefaultInstance()))
+                  grpc.newCapacityManagement.requestOccupied.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  grpc.newCapacityManagement.containsString.getDefaultInstance()))
+                  grpc.newCapacityManagement.responseOccupied.getDefaultInstance()))
                   .setSchemaDescriptor(new newCapacityManagementMethodDescriptorSupplier("SendTerminalOccupied"))
                   .build();
           }
@@ -162,13 +162,11 @@ public final class newCapacityManagementGrpc {
 
     /**
      * <pre>
-     *server streaming
-     *rpc GetSecondString(containsString) returns (stream containsString){}
      *client Streaming
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<grpc.newCapacityManagement.containsString> sendCountPeople(
-        io.grpc.stub.StreamObserver<grpc.newCapacityManagement.containsString> responseObserver) {
+    public io.grpc.stub.StreamObserver<grpc.newCapacityManagement.requestCount> sendCountPeople(
+        io.grpc.stub.StreamObserver<grpc.newCapacityManagement.responseCount> responseObserver) {
       return asyncUnimplementedStreamingCall(getSendCountPeopleMethod(), responseObserver);
     }
 
@@ -177,8 +175,8 @@ public final class newCapacityManagementGrpc {
      *client Streaming
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<grpc.newCapacityManagement.containsString> sendTerminalOccupied(
-        io.grpc.stub.StreamObserver<grpc.newCapacityManagement.containsString> responseObserver) {
+    public io.grpc.stub.StreamObserver<grpc.newCapacityManagement.requestOccupied> sendTerminalOccupied(
+        io.grpc.stub.StreamObserver<grpc.newCapacityManagement.responseOccupied> responseObserver) {
       return asyncUnimplementedStreamingCall(getSendTerminalOccupiedMethod(), responseObserver);
     }
 
@@ -195,15 +193,15 @@ public final class newCapacityManagementGrpc {
             getSendCountPeopleMethod(),
             asyncClientStreamingCall(
               new MethodHandlers<
-                grpc.newCapacityManagement.containsString,
-                grpc.newCapacityManagement.containsString>(
+                grpc.newCapacityManagement.requestCount,
+                grpc.newCapacityManagement.responseCount>(
                   this, METHODID_SEND_COUNT_PEOPLE)))
           .addMethod(
             getSendTerminalOccupiedMethod(),
             asyncClientStreamingCall(
               new MethodHandlers<
-                grpc.newCapacityManagement.containsString,
-                grpc.newCapacityManagement.containsString>(
+                grpc.newCapacityManagement.requestOccupied,
+                grpc.newCapacityManagement.responseOccupied>(
                   this, METHODID_SEND_TERMINAL_OCCUPIED)))
           .build();
     }
@@ -240,13 +238,11 @@ public final class newCapacityManagementGrpc {
 
     /**
      * <pre>
-     *server streaming
-     *rpc GetSecondString(containsString) returns (stream containsString){}
      *client Streaming
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<grpc.newCapacityManagement.containsString> sendCountPeople(
-        io.grpc.stub.StreamObserver<grpc.newCapacityManagement.containsString> responseObserver) {
+    public io.grpc.stub.StreamObserver<grpc.newCapacityManagement.requestCount> sendCountPeople(
+        io.grpc.stub.StreamObserver<grpc.newCapacityManagement.responseCount> responseObserver) {
       return asyncClientStreamingCall(
           getChannel().newCall(getSendCountPeopleMethod(), getCallOptions()), responseObserver);
     }
@@ -256,8 +252,8 @@ public final class newCapacityManagementGrpc {
      *client Streaming
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<grpc.newCapacityManagement.containsString> sendTerminalOccupied(
-        io.grpc.stub.StreamObserver<grpc.newCapacityManagement.containsString> responseObserver) {
+    public io.grpc.stub.StreamObserver<grpc.newCapacityManagement.requestOccupied> sendTerminalOccupied(
+        io.grpc.stub.StreamObserver<grpc.newCapacityManagement.responseOccupied> responseObserver) {
       return asyncClientStreamingCall(
           getChannel().newCall(getSendTerminalOccupiedMethod(), getCallOptions()), responseObserver);
     }
@@ -359,10 +355,10 @@ public final class newCapacityManagementGrpc {
       switch (methodId) {
         case METHODID_SEND_COUNT_PEOPLE:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.sendCountPeople(
-              (io.grpc.stub.StreamObserver<grpc.newCapacityManagement.containsString>) responseObserver);
+              (io.grpc.stub.StreamObserver<grpc.newCapacityManagement.responseCount>) responseObserver);
         case METHODID_SEND_TERMINAL_OCCUPIED:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.sendTerminalOccupied(
-              (io.grpc.stub.StreamObserver<grpc.newCapacityManagement.containsString>) responseObserver);
+              (io.grpc.stub.StreamObserver<grpc.newCapacityManagement.responseOccupied>) responseObserver);
         default:
           throw new AssertionError();
       }

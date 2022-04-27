@@ -24,6 +24,36 @@ public final class NewForesightManagementImpl {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_newResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_requestDecibel_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_requestDecibel_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_responseDecibel_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_responseDecibel_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_requestCo2Level_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_requestCo2Level_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_responseCo2Level_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_responseCo2Level_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_requestElecUsage_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_requestElecUsage_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_responseElecUsage_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_responseElecUsage_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -35,12 +65,22 @@ public final class NewForesightManagementImpl {
     java.lang.String[] descriptorData = {
       "\n\034newForesightManagement.proto\"%\n\016contai" +
       "nsString\022\023\n\013firstString\030\001 \001(\t\"\037\n\013newResp" +
-      "onse\022\020\n\010firstInt\030\001 \001(\0052~\n\026newForesightMa" +
-      "nagement\0224\n\016GetFirstString\022\017.containsStr" +
-      "ing\032\017.containsString\"\000\022.\n\013GetFirstInt\022\017." +
-      "containsString\032\014.newResponse\"\000B;\n\033grpc.n" +
-      "ewForesightManagementB\032NewForesightManag" +
-      "ementImplP\001b\006proto3"
+      "onse\022\020\n\010firstInt\030\001 \001(\005\"%\n\016requestDecibel" +
+      "\022\023\n\013firstString\030\001 \001(\t\"#\n\017responseDecibel" +
+      "\022\020\n\010firstInt\030\001 \001(\005\"&\n\017requestCo2Level\022\023\n" +
+      "\013firstString\030\001 \001(\t\"#\n\020responseCo2Level\022\017" +
+      "\n\007first32\030\001 \001(\005\"\'\n\020requestElecUsage\022\023\n\013f" +
+      "irstString\030\001 \001(\t\"$\n\021responseElecUsage\022\017\n" +
+      "\007first32\030\001 \001(\0052\261\002\n\026newForesightManagemen" +
+      "t\0224\n\016GetFirstString\022\017.containsString\032\017.c" +
+      "ontainsString\"\000\022.\n\013GetFirstInt\022\017.contain" +
+      "sString\032\014.newResponse\"\000\0229\n\020GetDecibelLev" +
+      "els\022\017.requestDecibel\032\020.responseDecibel\"\000" +
+      "(\001\0229\n\014GetCo2Levels\022\020.requestCo2Level\032\021.r" +
+      "esponseCo2Level\"\000(\0010\001\022;\n\014GetElecUsage\022\021." +
+      "requestElecUsage\032\022.responseElecUsage\"\000(\001" +
+      "0\001B;\n\033grpc.newForesightManagementB\032NewFo" +
+      "resightManagementImplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -66,6 +106,42 @@ public final class NewForesightManagementImpl {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_newResponse_descriptor,
         new java.lang.String[] { "FirstInt", });
+    internal_static_requestDecibel_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_requestDecibel_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_requestDecibel_descriptor,
+        new java.lang.String[] { "FirstString", });
+    internal_static_responseDecibel_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_responseDecibel_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_responseDecibel_descriptor,
+        new java.lang.String[] { "FirstInt", });
+    internal_static_requestCo2Level_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_requestCo2Level_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_requestCo2Level_descriptor,
+        new java.lang.String[] { "FirstString", });
+    internal_static_responseCo2Level_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_responseCo2Level_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_responseCo2Level_descriptor,
+        new java.lang.String[] { "First32", });
+    internal_static_requestElecUsage_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_requestElecUsage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_requestElecUsage_descriptor,
+        new java.lang.String[] { "FirstString", });
+    internal_static_responseElecUsage_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_responseElecUsage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_responseElecUsage_descriptor,
+        new java.lang.String[] { "First32", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -29,6 +29,26 @@ public final class NewCapacityManagementImpl {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_responseId_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_requestCount_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_requestCount_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_responseCount_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_responseCount_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_requestOccupied_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_requestOccupied_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_responseOccupied_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_responseOccupied_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -41,13 +61,17 @@ public final class NewCapacityManagementImpl {
       "\n\033newCapacityManagement.proto\"%\n\016contain" +
       "sString\022\023\n\013firstString\030\001 \001(\t\" \n\trequestI" +
       "d\022\023\n\013firstString\030\001 \001(\t\"\036\n\nresponseId\022\020\n\010" +
-      "firstInt\030\001 \001(\0052\270\001\n\025newCapacityManagement" +
-      "\022(\n\013GetIdAccess\022\n.requestId\032\013.responseId" +
-      "\"\000\0227\n\017SendCountPeople\022\017.containsString\032\017" +
-      ".containsString\"\000(\001\022<\n\024SendTerminalOccup" +
-      "ied\022\017.containsString\032\017.containsString\"\000(" +
-      "\001B9\n\032grpc.newCapacityManagementB\031NewCapa" +
-      "cityManagementImplP\001b\006proto3"
+      "firstInt\030\001 \001(\005\"#\n\014requestCount\022\023\n\013firstS" +
+      "tring\030\001 \001(\t\"!\n\rresponseCount\022\020\n\010firstInt" +
+      "\030\001 \001(\005\"&\n\017requestOccupied\022\023\n\013firstString" +
+      "\030\001 \001(\t\"$\n\020responseOccupied\022\020\n\010firstInt\030\001" +
+      " \001(\0052\270\001\n\025newCapacityManagement\022(\n\013GetIdA" +
+      "ccess\022\n.requestId\032\013.responseId\"\000\0224\n\017Send" +
+      "CountPeople\022\r.requestCount\032\016.responseCou" +
+      "nt\"\000(\001\022?\n\024SendTerminalOccupied\022\020.request" +
+      "Occupied\032\021.responseOccupied\"\000(\001B9\n\032grpc." +
+      "newCapacityManagementB\031NewCapacityManage" +
+      "mentImplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -78,6 +102,30 @@ public final class NewCapacityManagementImpl {
     internal_static_responseId_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_responseId_descriptor,
+        new java.lang.String[] { "FirstInt", });
+    internal_static_requestCount_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_requestCount_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_requestCount_descriptor,
+        new java.lang.String[] { "FirstString", });
+    internal_static_responseCount_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_responseCount_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_responseCount_descriptor,
+        new java.lang.String[] { "FirstInt", });
+    internal_static_requestOccupied_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_requestOccupied_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_requestOccupied_descriptor,
+        new java.lang.String[] { "FirstString", });
+    internal_static_responseOccupied_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_responseOccupied_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_responseOccupied_descriptor,
         new java.lang.String[] { "FirstInt", });
   }
 

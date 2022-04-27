@@ -36,11 +36,13 @@ public class NewEnergyEfficiencyClient {
 		// the stub is a local representation of the remote object
 		newEnergyEfficiencyBlockingStub bstub = newEnergyEfficiencyGrpc.newBlockingStub(newChannel);
 		
+		// Now we can call server and get a response
 		responsePres response = bstub.getPresRoom(rPres);
 		
 		// print the result we get
 		System.out.println(response.getFirstInt());
 		
+		// Clean up: shutdown the channel
 		newChannel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
 	
 	}

@@ -94,6 +94,102 @@ public final class newForesightManagementGrpc {
      return getGetFirstIntMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<grpc.newForesightManagement.requestDecibel,
+      grpc.newForesightManagement.responseDecibel> getGetDecibelLevelsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDecibelLevels",
+      requestType = grpc.newForesightManagement.requestDecibel.class,
+      responseType = grpc.newForesightManagement.responseDecibel.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+  public static io.grpc.MethodDescriptor<grpc.newForesightManagement.requestDecibel,
+      grpc.newForesightManagement.responseDecibel> getGetDecibelLevelsMethod() {
+    io.grpc.MethodDescriptor<grpc.newForesightManagement.requestDecibel, grpc.newForesightManagement.responseDecibel> getGetDecibelLevelsMethod;
+    if ((getGetDecibelLevelsMethod = newForesightManagementGrpc.getGetDecibelLevelsMethod) == null) {
+      synchronized (newForesightManagementGrpc.class) {
+        if ((getGetDecibelLevelsMethod = newForesightManagementGrpc.getGetDecibelLevelsMethod) == null) {
+          newForesightManagementGrpc.getGetDecibelLevelsMethod = getGetDecibelLevelsMethod = 
+              io.grpc.MethodDescriptor.<grpc.newForesightManagement.requestDecibel, grpc.newForesightManagement.responseDecibel>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "newForesightManagement", "GetDecibelLevels"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  grpc.newForesightManagement.requestDecibel.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  grpc.newForesightManagement.responseDecibel.getDefaultInstance()))
+                  .setSchemaDescriptor(new newForesightManagementMethodDescriptorSupplier("GetDecibelLevels"))
+                  .build();
+          }
+        }
+     }
+     return getGetDecibelLevelsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<grpc.newForesightManagement.requestCo2Level,
+      grpc.newForesightManagement.responseCo2Level> getGetCo2LevelsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCo2Levels",
+      requestType = grpc.newForesightManagement.requestCo2Level.class,
+      responseType = grpc.newForesightManagement.responseCo2Level.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<grpc.newForesightManagement.requestCo2Level,
+      grpc.newForesightManagement.responseCo2Level> getGetCo2LevelsMethod() {
+    io.grpc.MethodDescriptor<grpc.newForesightManagement.requestCo2Level, grpc.newForesightManagement.responseCo2Level> getGetCo2LevelsMethod;
+    if ((getGetCo2LevelsMethod = newForesightManagementGrpc.getGetCo2LevelsMethod) == null) {
+      synchronized (newForesightManagementGrpc.class) {
+        if ((getGetCo2LevelsMethod = newForesightManagementGrpc.getGetCo2LevelsMethod) == null) {
+          newForesightManagementGrpc.getGetCo2LevelsMethod = getGetCo2LevelsMethod = 
+              io.grpc.MethodDescriptor.<grpc.newForesightManagement.requestCo2Level, grpc.newForesightManagement.responseCo2Level>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "newForesightManagement", "GetCo2Levels"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  grpc.newForesightManagement.requestCo2Level.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  grpc.newForesightManagement.responseCo2Level.getDefaultInstance()))
+                  .setSchemaDescriptor(new newForesightManagementMethodDescriptorSupplier("GetCo2Levels"))
+                  .build();
+          }
+        }
+     }
+     return getGetCo2LevelsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<grpc.newForesightManagement.requestElecUsage,
+      grpc.newForesightManagement.responseElecUsage> getGetElecUsageMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetElecUsage",
+      requestType = grpc.newForesightManagement.requestElecUsage.class,
+      responseType = grpc.newForesightManagement.responseElecUsage.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<grpc.newForesightManagement.requestElecUsage,
+      grpc.newForesightManagement.responseElecUsage> getGetElecUsageMethod() {
+    io.grpc.MethodDescriptor<grpc.newForesightManagement.requestElecUsage, grpc.newForesightManagement.responseElecUsage> getGetElecUsageMethod;
+    if ((getGetElecUsageMethod = newForesightManagementGrpc.getGetElecUsageMethod) == null) {
+      synchronized (newForesightManagementGrpc.class) {
+        if ((getGetElecUsageMethod = newForesightManagementGrpc.getGetElecUsageMethod) == null) {
+          newForesightManagementGrpc.getGetElecUsageMethod = getGetElecUsageMethod = 
+              io.grpc.MethodDescriptor.<grpc.newForesightManagement.requestElecUsage, grpc.newForesightManagement.responseElecUsage>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "newForesightManagement", "GetElecUsage"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  grpc.newForesightManagement.requestElecUsage.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  grpc.newForesightManagement.responseElecUsage.getDefaultInstance()))
+                  .setSchemaDescriptor(new newForesightManagementMethodDescriptorSupplier("GetElecUsage"))
+                  .build();
+          }
+        }
+     }
+     return getGetElecUsageMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -135,21 +231,40 @@ public final class newForesightManagementGrpc {
     }
 
     /**
-     * <pre>
-     *server streaming
-     *rpc GetSecondString(containsString) returns (stream containsString){}
-     *client Streaming
-     *rpc SendDecibelLevels(stream requestDecibel) returns (responseDecibel){}
-     * bi-directional
-     *rpc Co2Levels(stream containsString) returns (stream containsString){}
-     * bi-directional
-     *rpc ElecUsage(stream containsString) returns (stream containsString){}
-     * get int
-     * </pre>
      */
     public void getFirstInt(grpc.newForesightManagement.containsString request,
         io.grpc.stub.StreamObserver<grpc.newForesightManagement.newResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGetFirstIntMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     *client Streaming
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<grpc.newForesightManagement.requestDecibel> getDecibelLevels(
+        io.grpc.stub.StreamObserver<grpc.newForesightManagement.responseDecibel> responseObserver) {
+      return asyncUnimplementedStreamingCall(getGetDecibelLevelsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * bi-directional
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<grpc.newForesightManagement.requestCo2Level> getCo2Levels(
+        io.grpc.stub.StreamObserver<grpc.newForesightManagement.responseCo2Level> responseObserver) {
+      return asyncUnimplementedStreamingCall(getGetCo2LevelsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * bi-directional
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<grpc.newForesightManagement.requestElecUsage> getElecUsage(
+        io.grpc.stub.StreamObserver<grpc.newForesightManagement.responseElecUsage> responseObserver) {
+      return asyncUnimplementedStreamingCall(getGetElecUsageMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -168,6 +283,27 @@ public final class newForesightManagementGrpc {
                 grpc.newForesightManagement.containsString,
                 grpc.newForesightManagement.newResponse>(
                   this, METHODID_GET_FIRST_INT)))
+          .addMethod(
+            getGetDecibelLevelsMethod(),
+            asyncClientStreamingCall(
+              new MethodHandlers<
+                grpc.newForesightManagement.requestDecibel,
+                grpc.newForesightManagement.responseDecibel>(
+                  this, METHODID_GET_DECIBEL_LEVELS)))
+          .addMethod(
+            getGetCo2LevelsMethod(),
+            asyncBidiStreamingCall(
+              new MethodHandlers<
+                grpc.newForesightManagement.requestCo2Level,
+                grpc.newForesightManagement.responseCo2Level>(
+                  this, METHODID_GET_CO2LEVELS)))
+          .addMethod(
+            getGetElecUsageMethod(),
+            asyncBidiStreamingCall(
+              new MethodHandlers<
+                grpc.newForesightManagement.requestElecUsage,
+                grpc.newForesightManagement.responseElecUsage>(
+                  this, METHODID_GET_ELEC_USAGE)))
           .build();
     }
   }
@@ -205,22 +341,44 @@ public final class newForesightManagementGrpc {
     }
 
     /**
-     * <pre>
-     *server streaming
-     *rpc GetSecondString(containsString) returns (stream containsString){}
-     *client Streaming
-     *rpc SendDecibelLevels(stream requestDecibel) returns (responseDecibel){}
-     * bi-directional
-     *rpc Co2Levels(stream containsString) returns (stream containsString){}
-     * bi-directional
-     *rpc ElecUsage(stream containsString) returns (stream containsString){}
-     * get int
-     * </pre>
      */
     public void getFirstInt(grpc.newForesightManagement.containsString request,
         io.grpc.stub.StreamObserver<grpc.newForesightManagement.newResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetFirstIntMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *client Streaming
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<grpc.newForesightManagement.requestDecibel> getDecibelLevels(
+        io.grpc.stub.StreamObserver<grpc.newForesightManagement.responseDecibel> responseObserver) {
+      return asyncClientStreamingCall(
+          getChannel().newCall(getGetDecibelLevelsMethod(), getCallOptions()), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * bi-directional
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<grpc.newForesightManagement.requestCo2Level> getCo2Levels(
+        io.grpc.stub.StreamObserver<grpc.newForesightManagement.responseCo2Level> responseObserver) {
+      return asyncBidiStreamingCall(
+          getChannel().newCall(getGetCo2LevelsMethod(), getCallOptions()), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * bi-directional
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<grpc.newForesightManagement.requestElecUsage> getElecUsage(
+        io.grpc.stub.StreamObserver<grpc.newForesightManagement.responseElecUsage> responseObserver) {
+      return asyncBidiStreamingCall(
+          getChannel().newCall(getGetElecUsageMethod(), getCallOptions()), responseObserver);
     }
   }
 
@@ -256,17 +414,6 @@ public final class newForesightManagementGrpc {
     }
 
     /**
-     * <pre>
-     *server streaming
-     *rpc GetSecondString(containsString) returns (stream containsString){}
-     *client Streaming
-     *rpc SendDecibelLevels(stream requestDecibel) returns (responseDecibel){}
-     * bi-directional
-     *rpc Co2Levels(stream containsString) returns (stream containsString){}
-     * bi-directional
-     *rpc ElecUsage(stream containsString) returns (stream containsString){}
-     * get int
-     * </pre>
      */
     public grpc.newForesightManagement.newResponse getFirstInt(grpc.newForesightManagement.containsString request) {
       return blockingUnaryCall(
@@ -307,17 +454,6 @@ public final class newForesightManagementGrpc {
     }
 
     /**
-     * <pre>
-     *server streaming
-     *rpc GetSecondString(containsString) returns (stream containsString){}
-     *client Streaming
-     *rpc SendDecibelLevels(stream requestDecibel) returns (responseDecibel){}
-     * bi-directional
-     *rpc Co2Levels(stream containsString) returns (stream containsString){}
-     * bi-directional
-     *rpc ElecUsage(stream containsString) returns (stream containsString){}
-     * get int
-     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<grpc.newForesightManagement.newResponse> getFirstInt(
         grpc.newForesightManagement.containsString request) {
@@ -328,6 +464,9 @@ public final class newForesightManagementGrpc {
 
   private static final int METHODID_GET_FIRST_STRING = 0;
   private static final int METHODID_GET_FIRST_INT = 1;
+  private static final int METHODID_GET_DECIBEL_LEVELS = 2;
+  private static final int METHODID_GET_CO2LEVELS = 3;
+  private static final int METHODID_GET_ELEC_USAGE = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -364,6 +503,15 @@ public final class newForesightManagementGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_GET_DECIBEL_LEVELS:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.getDecibelLevels(
+              (io.grpc.stub.StreamObserver<grpc.newForesightManagement.responseDecibel>) responseObserver);
+        case METHODID_GET_CO2LEVELS:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.getCo2Levels(
+              (io.grpc.stub.StreamObserver<grpc.newForesightManagement.responseCo2Level>) responseObserver);
+        case METHODID_GET_ELEC_USAGE:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.getElecUsage(
+              (io.grpc.stub.StreamObserver<grpc.newForesightManagement.responseElecUsage>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -417,6 +565,9 @@ public final class newForesightManagementGrpc {
               .setSchemaDescriptor(new newForesightManagementFileDescriptorSupplier())
               .addMethod(getGetFirstStringMethod())
               .addMethod(getGetFirstIntMethod())
+              .addMethod(getGetDecibelLevelsMethod())
+              .addMethod(getGetCo2LevelsMethod())
+              .addMethod(getGetElecUsageMethod())
               .build();
         }
       }

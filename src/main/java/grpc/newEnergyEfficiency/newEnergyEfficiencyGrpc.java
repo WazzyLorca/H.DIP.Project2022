@@ -91,30 +91,30 @@ public final class newEnergyEfficiencyGrpc {
      return getGetPresRoomMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<grpc.newEnergyEfficiency.containsString,
-      grpc.newEnergyEfficiency.containsString> getGetLightsMethod;
+  private static volatile io.grpc.MethodDescriptor<grpc.newEnergyEfficiency.requestLights,
+      grpc.newEnergyEfficiency.responseLights> getGetLightsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetLights",
-      requestType = grpc.newEnergyEfficiency.containsString.class,
-      responseType = grpc.newEnergyEfficiency.containsString.class,
+      requestType = grpc.newEnergyEfficiency.requestLights.class,
+      responseType = grpc.newEnergyEfficiency.responseLights.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-  public static io.grpc.MethodDescriptor<grpc.newEnergyEfficiency.containsString,
-      grpc.newEnergyEfficiency.containsString> getGetLightsMethod() {
-    io.grpc.MethodDescriptor<grpc.newEnergyEfficiency.containsString, grpc.newEnergyEfficiency.containsString> getGetLightsMethod;
+  public static io.grpc.MethodDescriptor<grpc.newEnergyEfficiency.requestLights,
+      grpc.newEnergyEfficiency.responseLights> getGetLightsMethod() {
+    io.grpc.MethodDescriptor<grpc.newEnergyEfficiency.requestLights, grpc.newEnergyEfficiency.responseLights> getGetLightsMethod;
     if ((getGetLightsMethod = newEnergyEfficiencyGrpc.getGetLightsMethod) == null) {
       synchronized (newEnergyEfficiencyGrpc.class) {
         if ((getGetLightsMethod = newEnergyEfficiencyGrpc.getGetLightsMethod) == null) {
           newEnergyEfficiencyGrpc.getGetLightsMethod = getGetLightsMethod = 
-              io.grpc.MethodDescriptor.<grpc.newEnergyEfficiency.containsString, grpc.newEnergyEfficiency.containsString>newBuilder()
+              io.grpc.MethodDescriptor.<grpc.newEnergyEfficiency.requestLights, grpc.newEnergyEfficiency.responseLights>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(
                   "newEnergyEfficiency", "GetLights"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  grpc.newEnergyEfficiency.containsString.getDefaultInstance()))
+                  grpc.newEnergyEfficiency.requestLights.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  grpc.newEnergyEfficiency.containsString.getDefaultInstance()))
+                  grpc.newEnergyEfficiency.responseLights.getDefaultInstance()))
                   .setSchemaDescriptor(new newEnergyEfficiencyMethodDescriptorSupplier("GetLights"))
                   .build();
           }
@@ -123,30 +123,30 @@ public final class newEnergyEfficiencyGrpc {
      return getGetLightsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<grpc.newEnergyEfficiency.containsString,
-      grpc.newEnergyEfficiency.containsString> getGetHeatMethod;
+  private static volatile io.grpc.MethodDescriptor<grpc.newEnergyEfficiency.requestHeat,
+      grpc.newEnergyEfficiency.responseHeat> getGetHeatMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetHeat",
-      requestType = grpc.newEnergyEfficiency.containsString.class,
-      responseType = grpc.newEnergyEfficiency.containsString.class,
+      requestType = grpc.newEnergyEfficiency.requestHeat.class,
+      responseType = grpc.newEnergyEfficiency.responseHeat.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-  public static io.grpc.MethodDescriptor<grpc.newEnergyEfficiency.containsString,
-      grpc.newEnergyEfficiency.containsString> getGetHeatMethod() {
-    io.grpc.MethodDescriptor<grpc.newEnergyEfficiency.containsString, grpc.newEnergyEfficiency.containsString> getGetHeatMethod;
+  public static io.grpc.MethodDescriptor<grpc.newEnergyEfficiency.requestHeat,
+      grpc.newEnergyEfficiency.responseHeat> getGetHeatMethod() {
+    io.grpc.MethodDescriptor<grpc.newEnergyEfficiency.requestHeat, grpc.newEnergyEfficiency.responseHeat> getGetHeatMethod;
     if ((getGetHeatMethod = newEnergyEfficiencyGrpc.getGetHeatMethod) == null) {
       synchronized (newEnergyEfficiencyGrpc.class) {
         if ((getGetHeatMethod = newEnergyEfficiencyGrpc.getGetHeatMethod) == null) {
           newEnergyEfficiencyGrpc.getGetHeatMethod = getGetHeatMethod = 
-              io.grpc.MethodDescriptor.<grpc.newEnergyEfficiency.containsString, grpc.newEnergyEfficiency.containsString>newBuilder()
+              io.grpc.MethodDescriptor.<grpc.newEnergyEfficiency.requestHeat, grpc.newEnergyEfficiency.responseHeat>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(
                   "newEnergyEfficiency", "GetHeat"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  grpc.newEnergyEfficiency.containsString.getDefaultInstance()))
+                  grpc.newEnergyEfficiency.requestHeat.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  grpc.newEnergyEfficiency.containsString.getDefaultInstance()))
+                  grpc.newEnergyEfficiency.responseHeat.getDefaultInstance()))
                   .setSchemaDescriptor(new newEnergyEfficiencyMethodDescriptorSupplier("GetHeat"))
                   .build();
           }
@@ -204,21 +204,21 @@ public final class newEnergyEfficiencyGrpc {
 
     /**
      * <pre>
-     *server streaming
+     *server streaming Lights
      * </pre>
      */
-    public void getLights(grpc.newEnergyEfficiency.containsString request,
-        io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.containsString> responseObserver) {
+    public void getLights(grpc.newEnergyEfficiency.requestLights request,
+        io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.responseLights> responseObserver) {
       asyncUnimplementedUnaryCall(getGetLightsMethod(), responseObserver);
     }
 
     /**
      * <pre>
-     *server streaming
+     *server streaming Heat
      * </pre>
      */
-    public void getHeat(grpc.newEnergyEfficiency.containsString request,
-        io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.containsString> responseObserver) {
+    public void getHeat(grpc.newEnergyEfficiency.requestHeat request,
+        io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.responseHeat> responseObserver) {
       asyncUnimplementedUnaryCall(getGetHeatMethod(), responseObserver);
     }
 
@@ -242,15 +242,15 @@ public final class newEnergyEfficiencyGrpc {
             getGetLightsMethod(),
             asyncServerStreamingCall(
               new MethodHandlers<
-                grpc.newEnergyEfficiency.containsString,
-                grpc.newEnergyEfficiency.containsString>(
+                grpc.newEnergyEfficiency.requestLights,
+                grpc.newEnergyEfficiency.responseLights>(
                   this, METHODID_GET_LIGHTS)))
           .addMethod(
             getGetHeatMethod(),
             asyncServerStreamingCall(
               new MethodHandlers<
-                grpc.newEnergyEfficiency.containsString,
-                grpc.newEnergyEfficiency.containsString>(
+                grpc.newEnergyEfficiency.requestHeat,
+                grpc.newEnergyEfficiency.responseHeat>(
                   this, METHODID_GET_HEAT)))
           .build();
     }
@@ -298,22 +298,22 @@ public final class newEnergyEfficiencyGrpc {
 
     /**
      * <pre>
-     *server streaming
+     *server streaming Lights
      * </pre>
      */
-    public void getLights(grpc.newEnergyEfficiency.containsString request,
-        io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.containsString> responseObserver) {
+    public void getLights(grpc.newEnergyEfficiency.requestLights request,
+        io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.responseLights> responseObserver) {
       asyncServerStreamingCall(
           getChannel().newCall(getGetLightsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      * <pre>
-     *server streaming
+     *server streaming Heat
      * </pre>
      */
-    public void getHeat(grpc.newEnergyEfficiency.containsString request,
-        io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.containsString> responseObserver) {
+    public void getHeat(grpc.newEnergyEfficiency.requestHeat request,
+        io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.responseHeat> responseObserver) {
       asyncServerStreamingCall(
           getChannel().newCall(getGetHeatMethod(), getCallOptions()), request, responseObserver);
     }
@@ -359,22 +359,22 @@ public final class newEnergyEfficiencyGrpc {
 
     /**
      * <pre>
-     *server streaming
+     *server streaming Lights
      * </pre>
      */
-    public java.util.Iterator<grpc.newEnergyEfficiency.containsString> getLights(
-        grpc.newEnergyEfficiency.containsString request) {
+    public java.util.Iterator<grpc.newEnergyEfficiency.responseLights> getLights(
+        grpc.newEnergyEfficiency.requestLights request) {
       return blockingServerStreamingCall(
           getChannel(), getGetLightsMethod(), getCallOptions(), request);
     }
 
     /**
      * <pre>
-     *server streaming
+     *server streaming Heat
      * </pre>
      */
-    public java.util.Iterator<grpc.newEnergyEfficiency.containsString> getHeat(
-        grpc.newEnergyEfficiency.containsString request) {
+    public java.util.Iterator<grpc.newEnergyEfficiency.responseHeat> getHeat(
+        grpc.newEnergyEfficiency.requestHeat request) {
       return blockingServerStreamingCall(
           getChannel(), getGetHeatMethod(), getCallOptions(), request);
     }
@@ -452,12 +452,12 @@ public final class newEnergyEfficiencyGrpc {
               (io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.responsePres>) responseObserver);
           break;
         case METHODID_GET_LIGHTS:
-          serviceImpl.getLights((grpc.newEnergyEfficiency.containsString) request,
-              (io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.containsString>) responseObserver);
+          serviceImpl.getLights((grpc.newEnergyEfficiency.requestLights) request,
+              (io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.responseLights>) responseObserver);
           break;
         case METHODID_GET_HEAT:
-          serviceImpl.getHeat((grpc.newEnergyEfficiency.containsString) request,
-              (io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.containsString>) responseObserver);
+          serviceImpl.getHeat((grpc.newEnergyEfficiency.requestHeat) request,
+              (io.grpc.stub.StreamObserver<grpc.newEnergyEfficiency.responseHeat>) responseObserver);
           break;
         default:
           throw new AssertionError();

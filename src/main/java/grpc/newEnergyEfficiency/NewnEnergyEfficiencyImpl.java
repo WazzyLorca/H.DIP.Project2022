@@ -29,6 +29,26 @@ public final class NewnEnergyEfficiencyImpl {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_responsePres_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_requestLights_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_requestLights_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_responseLights_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_responseLights_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_requestHeat_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_requestHeat_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_responseHeat_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_responseHeat_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -41,14 +61,18 @@ public final class NewnEnergyEfficiencyImpl {
       "\n\031newEnergyEfficiency.proto\"%\n\016containsS" +
       "tring\022\023\n\013firstString\030\001 \001(\t\"\"\n\013requestPre" +
       "s\022\023\n\013firstString\030\001 \001(\t\" \n\014responsePres\022\020" +
-      "\n\010firstInt\030\001 \001(\0052\335\001\n\023newEnergyEfficiency" +
-      "\0224\n\016GetFirstString\022\017.containsString\032\017.co" +
-      "ntainsString\"\000\022,\n\013GetPresRoom\022\014.requestP" +
-      "res\032\r.responsePres\"\000\0221\n\tGetLights\022\017.cont" +
-      "ainsString\032\017.containsString\"\0000\001\022/\n\007GetHe" +
-      "at\022\017.containsString\032\017.containsString\"\0000\001" +
-      "B6\n\030grpc.newEnergyEfficiencyB\030NewnEnergy" +
-      "EfficiencyImplP\001b\006proto3"
+      "\n\010firstInt\030\001 \001(\005\"$\n\rrequestLights\022\023\n\013fir" +
+      "stString\030\001 \001(\t\"\"\n\016responseLights\022\020\n\010firs" +
+      "tInt\030\001 \001(\005\"\"\n\013requestHeat\022\023\n\013firstString" +
+      "\030\001 \001(\t\" \n\014responseHeat\022\020\n\010firstInt\030\001 \001(\005" +
+      "2\327\001\n\023newEnergyEfficiency\0224\n\016GetFirstStri" +
+      "ng\022\017.containsString\032\017.containsString\"\000\022," +
+      "\n\013GetPresRoom\022\014.requestPres\032\r.responsePr" +
+      "es\"\000\0220\n\tGetLights\022\016.requestLights\032\017.resp" +
+      "onseLights\"\0000\001\022*\n\007GetHeat\022\014.requestHeat\032" +
+      "\r.responseHeat\"\0000\001B6\n\030grpc.newEnergyEffi" +
+      "ciencyB\030NewnEnergyEfficiencyImplP\001b\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -79,6 +103,30 @@ public final class NewnEnergyEfficiencyImpl {
     internal_static_responsePres_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_responsePres_descriptor,
+        new java.lang.String[] { "FirstInt", });
+    internal_static_requestLights_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_requestLights_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_requestLights_descriptor,
+        new java.lang.String[] { "FirstString", });
+    internal_static_responseLights_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_responseLights_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_responseLights_descriptor,
+        new java.lang.String[] { "FirstInt", });
+    internal_static_requestHeat_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_requestHeat_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_requestHeat_descriptor,
+        new java.lang.String[] { "FirstString", });
+    internal_static_responseHeat_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_responseHeat_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_responseHeat_descriptor,
         new java.lang.String[] { "FirstInt", });
   }
 

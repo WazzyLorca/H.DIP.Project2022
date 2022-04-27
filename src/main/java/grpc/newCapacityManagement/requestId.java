@@ -4,6 +4,10 @@
 package grpc.newCapacityManagement;
 
 /**
+ * <pre>
+ * Unary Get Id Access
+ * </pre>
+ *
  * Protobuf type {@code requestId}
  */
 public  final class requestId extends
@@ -271,6 +275,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Unary Get Id Access
+   * </pre>
+   *
    * Protobuf type {@code requestId}
    */
   public static final class Builder extends
