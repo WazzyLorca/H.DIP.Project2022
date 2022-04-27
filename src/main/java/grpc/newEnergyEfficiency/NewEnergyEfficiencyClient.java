@@ -46,13 +46,24 @@ public class NewEnergyEfficiencyClient {
 		// now handle server streaming
 		// we will use the blocking stub
 		requestLights rLights = requestLights.newBuilder()
-				.setFirstString("Turned On")
+				.setFirstString("Lights On")
 				.build();
 		
 		Iterator<responseLights> responses = bstub.getLights(rLights);
 		
 		while (responses.hasNext()) {
 			responseLights individualResponse = responses.next();
+			System.out.println(individualResponse.getFirstInt());
+		}
+		
+		requestHeat rHeat = requestHeat.newBuilder()
+				.setFirstString("Heat On")
+				.build();
+		
+		Iterator<responseHeat> responseH = bstub.getHeat(rHeat);
+		
+		while (responses.hasNext()) {
+			responseHeat individualResponse = responseH.next();
 			System.out.println(individualResponse.getFirstInt());
 		}
 		

@@ -48,6 +48,39 @@ public class NewCapacityManagementServer {
 			responseObserver.onNext(responseBuilder.build());
 			responseObserver.onCompleted();
 		}
+		
+		// method for client Streaming Count People
+		// implement a StreamObserver and pass it back to gRPC library
+		// specify message type
+		public StreamObserver<requestCount> sendCountPeople(StreamObserver<responseCount> responseObserver) {
+			System.out.println("On Server, inside streaming. Our Count is: ");
+			return new StreamObserver<requestCount>() {
+
+				@Override
+				public void onNext(requestCount value) {
+					System.out.println("On Server, message from Client Count is: " + value.getFirstString());
+					
+				}
+
+				@Override
+				public void onError(Throwable t) {
+					// TODO Auto-generated method stub
+					
+				}
+
+				@Override
+				public void onCompleted() {
+					//Now build up response
+					responseCount.Builder responseBuilder = responseCount.newBuilder();
+					
+					responseBuilder.setFirstInt(25);
+					//responseBuilder.setFirstString("Server says it has got your completed message, thanks");
+				
+					responseObserver.onNext(responseBuilder.build());
+					responseObserver.onCompleted();
+					
+				}};
+		}
 	}
 
 }

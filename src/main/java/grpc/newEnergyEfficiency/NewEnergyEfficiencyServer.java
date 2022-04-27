@@ -74,13 +74,13 @@ import io.grpc.stub.StreamObserver;
 				responseHeat.Builder responseBuilder = responseHeat.newBuilder();
 				
 				// add in room numbers..proto file
-				// first message
+				// first message - room1
 				responseBuilder.setFirstInt(15);
 				responseObserver.onNext(responseBuilder.build());
-				// second message
+				// second message - room2
 				responseBuilder.setFirstInt(20);
 				responseObserver.onNext(responseBuilder.build());
-				// third message
+				// third message - room3
 				responseBuilder.setFirstInt(25);
 				responseObserver.onNext(responseBuilder.build());
 				
